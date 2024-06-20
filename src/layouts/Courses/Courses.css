@@ -1,0 +1,9 @@
+.CoursesCards-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin-bottom: 10rem;
+}

@@ -1,0 +1,17 @@
+{
+    "title": "Sections",
+    "text": "Discover new ways of learning",
+    "courses": {
+      "title": "Courses",
+      "text": "Educational or training courses are specialized educational programs aimed at improving individuals' skills and knowledge in specific fields. These courses can be short or long term."
+    },
+    "bachelor": {
+      "title": "Bachelor",
+      "text": "Baccalaureate is a term used in several countries to describe the final stage of secondary education and its graduation certificate. The details of the baccalaureate system vary between countries, but there are many common elements."
+    },
+    "certificates": {
+      "title": "Certificates",
+      "text": "Certificates are official documents given to individuals to prove that they have completed a certain level of education or training or acquired a specific skill. Certifications can be academic, professional, technical, or even related to soft skills."
+    }
+  }
+  

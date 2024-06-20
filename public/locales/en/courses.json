@@ -1,0 +1,23 @@
+{
+    "title": "Top Courses",
+    "text": "Enjoy a new learning experience through our library of high-level courses",
+    "it": {
+      "title": "IT",
+      "text": "It's time to excel... The course includes all the important information that makes you excel.",
+      "lessonsNum": "12 Lessons",
+      "rating": "4.9"
+    },
+    "math": {
+      "title": "Mathematics",
+      "text": "It's time to excel... The course includes all the important information that makes you excel.",
+      "lessonsNum": "12 lessons",
+      "rating": "4.9"
+    },
+    "science": {
+      "title": "Science",
+      "text": "It's time to excel... The course includes all the important information that makes you excel.",
+      "lessonsNum": "12 Lessons",
+      "rating": "4.9"
+    }
+  }
+  

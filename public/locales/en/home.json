@@ -1,0 +1,26 @@
+{
+  "welcome_message": "The best way to learn",
+  "description": "Online learning is supported electronically to learn it<br />It depends on the internet for interaction between the teacher and the student<br />Distribution of study materials",
+  "logo_alt": "Description of the image",
+  "navbar": {
+    "home": "Home",
+    "sections": "Sections",
+    "courses": "Courses",
+    "overview": "Overview",
+    "coaches": "Coaches"
+  },
+  "cards": {
+    "duration": {
+      "title": "60,0000+",
+      "text": "Content Duration"
+    },
+    "graduates": {
+      "title": "10,0000+",
+      "text": "Students"
+    },
+    "sections": {
+      "title": "12",
+      "text": "Sections"
+    }
+  }
+}
