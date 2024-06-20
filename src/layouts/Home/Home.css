@@ -21,17 +21,16 @@ svg {
   flex-direction: row;
   position: relative; 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-top: 1rem;
   width: 100%;
-  text-align: right;
+  text-align: center;
   color: aliceblue;
 }
 
 .text-content {
   flex: 1;
-  padding: 20px;
 }
 
 .image-content {
@@ -55,15 +54,8 @@ svg {
 }
 
 
-.circle1 {
-  fill: none;
-  stroke: #b01717; 
-  stroke-width: 6px; 
-}
-
-
 /*  (mobile) */
-@media (max-width: 599px) {
+@media (max-width: 599px) { 
   svg {
     position: absolute;
     top: 0;
@@ -140,8 +132,4 @@ svg {
     display: none;
   }
 
-  .image-content img {
-    width: 20rem;
-    height: 22rem;
-  } 
 }

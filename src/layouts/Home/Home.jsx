@@ -18,6 +18,7 @@ const Home = () => {
   const [pathData, setPathData] = useState('M0,100 C10,250 690,0 500,460 L500,00 L0,0 Z');
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+  const currentLanguage = i18n.language;
 
  const StartPageCardsData = [
 
@@ -101,15 +102,31 @@ const Home = () => {
         <NavBar />
       )}
 
-      <div className="content">
-        <div className="text-content">
-          <h1>{t('welcome_message')}</h1>
-          <p dangerouslySetInnerHTML={{ __html: t('description') }}></p>
-        </div>
-        <div className="image-content">
-          <img src={lady} alt={t('logo_alt')} />
-        </div>
-      </div>
+      {/* Conditional rendering based on language */}
+      {currentLanguage === 'en' && (
+                <div className="content">
+                    <div className="image-content">
+                        <img src={lady} alt="Image" />
+                    </div>
+                    <div className="text-content">
+                    <h1>{t('welcome_message')}</h1>
+                    <p dangerouslySetInnerHTML={{ __html: t('description') }}></p>
+                    </div>
+                </div>
+            )}
+
+            {currentLanguage === 'ar' && (
+                <div className="content">
+                    <div className="text-content">   
+                    <h1>{t('welcome_message')}</h1>
+                    <p dangerouslySetInnerHTML={{ __html: t('description') }}></p> 
+                    </div>
+                    <div className="image-content">
+                        <img src={lady} alt="Image" />
+                    </div>
+                </div>
+            )}
+
       <div className="homeCards-container">
         {StartPageCardsData.map((card, index) => (
           <SectionsCard
