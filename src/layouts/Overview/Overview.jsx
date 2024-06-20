@@ -7,44 +7,43 @@ import photo5 from "../../assets/photo5.png"
 import photo6 from "../../assets/photo6.png"
 import photo7 from "../../assets/photo7.png"
 
-import degree from "../../assets//degree.png"
-import video from "../../assets//video.png"
-import profile from "../../assets//profile.png"
+import degree from "../../assets/degree.png"
+import video from "../../assets/video.png"
+import profile from "../../assets/profile.png"
 
 import { useTranslation } from 'react-i18next';
 
 const Overview = () => {
+  const { t, i18n } = useTranslation('overview');
 
-  const { t } = useTranslation('overview');
+  const currentLanguage = i18n.language;
+  const isRtl = currentLanguage === 'ar'; 
 
   return (
-    <div className="overview-container" id="overview"> 
-      <div className="overview-left">
-      <h2 className="overview-title">{t('overviewTitle')}</h2>
-
-        <ul className="overview-list">
+    <div className="overview-container" id="overview">
+      <div className={`overview-left ${isRtl ? 'rtl' : ''}`}>
+        <h2 className="overview-title">{t('overviewTitle')}</h2>
           <li className="overview-item">
-            <img src={degree}  className="item-image" />
+          <img src={degree} alt="Degree Icon" className="item-image" />
             <div>
-            <h2>{t('onlineDegrees')}</h2>
-            <p>{t('onlineDegreesText')}</p>
+              <h2>{t('onlineDegrees')}</h2>
+              <p>{t('onlineDegreesText')}</p>
             </div>
           </li>
           <li className="overview-item">
-            <img src={video}  className="item-image" />
+          <img src={video} alt="Video Icon" className="item-image" />
             <div>
-            <h2>{t('shortCourses')}</h2>
-            <p>{t('shortCoursesText')}</p>
+              <h2>{t('shortCourses')}</h2>
+              <p>{t('shortCoursesText')}</p>
             </div>
           </li>
           <li className="overview-item">
-            <img src={profile}  className="item-image" />
+          <img src={profile} alt="Profile Icon" className="item-image" />
             <div>
-            <h2>{t('professionalInstructors')}</h2>
-            <p>{t('professionalInstructorsText')}</p>
+              <h2>{t('professionalInstructors')}</h2>
+              <p>{t('professionalInstructorsText')}</p>
             </div>
           </li>
-        </ul>
       </div>
       <div className="overview-right">
         <div className="circle-container">
@@ -60,10 +59,10 @@ const Overview = () => {
           <div className="circle">
             <img src={photo4} alt="Circle 4" className="circle-image" />
           </div>
-           <div className="circle">
+          <div className="circle">
             <img src={photo5} alt="Circle 5" className="circle-image" />
           </div>
-           <div className="circle">
+          <div className="circle">
             <img src={photo6} alt="Circle 6" className="circle-image" />
           </div>
           <div className="circle">

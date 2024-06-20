@@ -89,7 +89,7 @@ const Home = () => {
           </linearGradient>
         </defs>
         <path d={pathData} style={{ stroke: 'none', fill: 'url(#grad1)' }}></path>
-        <circle  cx="40" cy="160" r="20" fill="transparent" stroke='white' />
+        {!isMobile ? <circle  cx="40" cy="160" r="20" fill="transparent" stroke='white' /> : " "}
       </svg>
 
       {isMobile ? (
@@ -102,7 +102,6 @@ const Home = () => {
         <NavBar />
       )}
 
-      {/* Conditional rendering based on language */}
       {currentLanguage === 'en' && (
                 <div className="content">
                     <div className="image-content">

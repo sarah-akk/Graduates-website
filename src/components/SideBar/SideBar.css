@@ -6,7 +6,7 @@
     right: -100%;
     width: 250px;
     height: 100%;
-    background-color: #fff;
+    background-color:rgb(219, 219, 219);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     transition: right 0.3s ease;
     z-index: 1;
@@ -16,12 +16,19 @@
     right: 0;
   }
   
-  .close-button {
+  .sidebar-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sidebar-close {
     background: none;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     display: block;
+    margin: 1rem;
   }
   
   .sidebar ul {

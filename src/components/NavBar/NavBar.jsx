@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const NavBar = () => {
     const { t, i18n } = useTranslation('home');
-    const [activeLang, setActiveLang] = useState('en');
+    const [activeLang, setActiveLang] = useState('ar');
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);

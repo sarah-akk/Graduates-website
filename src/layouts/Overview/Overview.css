@@ -1,34 +1,36 @@
 .overview-container {
   width: 100%;
-  height: 30rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 7rem;
-  padding-top: 6rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
   background-image: linear-gradient(#127EE1, #163EAF);
-  margin-bottom: 8rem;
 
 }
 
 .overview-left {
-  width: 50%;
   flex: 1;
-  direction: rtl; 
+  direction: ltr;
+  margin-left: 5rem;
+}
+
+.rtl {
+  direction: rtl;
 }
 
 .overview-title {
   color: white;
   font-size: 24px;
   margin-bottom: 20px;
-  text-align: right;
-  margin-right: 2rem;
+  padding: 1rem;
 }
 
 .overview-list {
-  text-align: right;
   list-style: none;
-  padding: 0;
+  padding: 2rem;
 }
 
 .overview-item {
@@ -36,7 +38,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  direction: rtl; 
 }
 
 .item-image {
@@ -171,6 +172,7 @@
     width: 100%;
     text-align: start;
     order: 1;
+    margin-left: 0;
   }
 
   .overview-right {
