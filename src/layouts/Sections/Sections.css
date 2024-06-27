@@ -4,7 +4,6 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 8rem;
 }
 
 .Sections-Title{
@@ -62,7 +61,7 @@ margin-top: 2rem;
 @media (max-width: 599px) {
     
 .SectionCards-container{
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
     display: flex;
     justify-content: center;

@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 7rem;
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
   background-image: linear-gradient(#127EE1, #163EAF);
 
@@ -24,8 +24,7 @@
 .overview-title {
   color: white;
   font-size: 24px;
-  margin-bottom: 20px;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .overview-list {
@@ -56,6 +55,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 7rem;
 }
 
 .circle-container {
@@ -157,6 +157,9 @@
     padding-top: 1rem;
   }
   
+  .overview-title{
+    text-align: center;
+  }
 
 .circle-container {
   position: absolute;
@@ -169,8 +172,9 @@
 }
 
   .overview-left {
-    width: 100%;
+    width: 90%;
     text-align: start;
+    font-size: 14px;
     order: 1;
     margin-left: 0;
   }

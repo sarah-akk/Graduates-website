@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-import "./Sections.css";
 import SectionsCard from "../../components/SectionsCard/SectionsCard";
 import courses from "../../assets/courses.png";
 import bacaloria from "../../assets/bacaloria.png";
 import certificates from "../../assets/certificates.png";
+import "./Sections.css";
 
 const Sections = () => {
   const [activeIndex, setActiveIndex] = useState(0);

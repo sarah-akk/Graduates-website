@@ -41,7 +41,7 @@
   }
   
   .card-content {
-    padding: 5px;
+    padding: 3px;
   }
   
   .card-title {
@@ -50,7 +50,7 @@
   }
   
   .card-description {
-    margin: 8px 0 0;
+    margin: 1px 0 0;
     font-size: 1em;
   }
   
@@ -108,32 +108,9 @@
 
   @media (max-width: 590px) {
   
-    .middle-card{
-      padding: 0.2rem;
-      font-size: 10px;
-      max-height: 20rem;
-      width: 100%;
-    }
-    .middle-card .card-image{
-     max-width: 5rem;
-     max-height: 4rem ;
-     margin: 0.5rem;
-    }
-    .with-border{
-      width: 100%;
-      padding: 0.2rem;
-      font-size: 10px;
-      max-height: 18rem;
-      max-width: 20rem;
-    }
-    .with-border .card-image{
-      max-width: 5rem;
-      max-height: 4rem ;
-      margin: 0.5rem;
-     }
 
      .card-content{
-      padding: 1px;
+      padding: 7px;
      }
   
   }

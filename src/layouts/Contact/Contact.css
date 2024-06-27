@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
   background-color: white;
 }
 
@@ -33,6 +32,7 @@
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  direction: rtl;
 }
 
 .contact-form {
@@ -84,5 +84,10 @@
     width: 100%;
     order: 1; 
     padding: 0;
+    text-align: start;
+  }
+  .contact-info{
+    display: flex;
+    
   }
 }
