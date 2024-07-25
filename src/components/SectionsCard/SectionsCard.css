@@ -1,116 +1,141 @@
-/* SectionsCard.css */
 .card {
-    border: 2px solid #163EAF;
-    background-color: white;
-    color: #163EAF;
-    border-top-left-radius: 8px; 
-    border-bottom-right-radius: 8px; 
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    margin-top: 1rem;
-    padding: 1rem;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .middle-card {
-    background-color: #163EAF;
-    color: white;
-  }
-  
+  border: 2px solid #163EAF;
+  background-color: white;
+  color: #163EAF;
+  border-radius: 8px; 
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin-top: 1rem;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeCard .card-image{
+border-radius: 0;
+}
+
 .with-border {
-    border: 2px solid #163EAF;
-  }
+  border: 2px solid #163EAF;
+}
+
+.no-border {
+  border: none;
   
-  .no-border {
-    border: none;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-image {
-    width:fit-content;
-    height: fit-content;
-    object-fit: contain;
-    border-radius: 15px;
-  }
-  
+}
+
+.card:hover {
+  transform: scale(1.2);
+  background-color: #163EAF;
+  color: white;
+}
+
+.card:hover.no-border {
+  transform: scale(1.1);  
+}
+
+.card.with-border.homeCard:hover .card-image {
+  filter: brightness(0) invert(1);
+}
+
+
+.card:hover .playImg {
+  filter: brightness(0) invert(1); 
+}
+
+.card:hover .lessonRate {
+  background-color: white;
+  color: #163EAF;
+}
+
+
+.card:hover .starCircle {
+  background-color: #163EAF;
+}
+
+.card-image {
+  width: fit-content;
+  height: fit-content;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.card-content {
+  padding: 3px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.card-description {
+  margin: 1px 0 0;
+  font-size: 1em;
+}
+
+.CourseInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.LessonsNum {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.playImg {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 5px;
+}
+
+.lessonRate {
+  display: flex;
+  flex-direction: row;
+  background-color: #163EAF;
+  color: white;
+  border-radius: 10px;
+  width: 4rem;
+  height: 1.7rem;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.starImg {
+  width: 1.0rem;
+  height: 1.0rem;
+}
+
+.starCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 590px) {
   .card-content {
-    padding: 3px;
-  }
-  
-  .card-title {
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
-  .card-description {
-    margin: 1px 0 0;
-    font-size: 1em;
-  }
-  
-  .CourseInfo{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.5rem;
+    padding: 7px;
+    font-size: small;
   }
 
-  .LessonsNum{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+  .card:hover{
+    transform: scale(1.05);
 
-  .playImg{
-    width: 1.5rem;
-    height: 1.5rem;
-    padding: 5px;
   }
-
-  .lessonRate{
-    display: flex;
-    flex-direction: row;
-    background-color: #163EAF;
-    color: white;
-    border-radius: 10px;
-    width: 4rem;
-    height: 1.7rem;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-  }
- 
-  .starImg{
-    width: 1.0rem;
-    height: 1.0rem;
-  }
-
-  .starCircle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10px; 
-    height: 10px; 
-    border-radius: 50%;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
-  }
-
-
-  @media (max-width: 590px) {
-  
-
-     .card-content{
-      padding: 7px;
-     }
-  
-  }
+}

@@ -1,9 +1,8 @@
 .coaches-container {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 20rem;
+  gap: 15rem;
   margin-bottom: 4rem;
   padding-top: 5rem;
 }
@@ -27,7 +26,7 @@
 }
 
 .coach-image:nth-child(1) {
-  transform: translateX(150%);
+  transform: translateX(100%);
 }
 
 .coach-image:nth-child(3) {
@@ -35,6 +34,7 @@
 }
 
 .coaches-right {
+  padding-top: 3rem;
   direction: rtl;
   right: 0;
   max-width: 400px;
@@ -48,7 +48,24 @@
 
 .coaches-paragraph {
   font-size: 20px;
+  text-align: start;
+
   color: #333;
+}
+
+.reverse .coaches-left {
+  order: 2;
+  margin-right: 0;
+  margin-left: 2rem;
+}
+
+.reverse .coaches-right {
+  order: 1;
+  direction: ltr;
+}
+
+.reverse .coaches-paragraph {
+  font-size: 16px;
 }
 
 /* Mobile responsive styles */
@@ -75,7 +92,17 @@
 
   .coach-image {
     transform: none !important;
-    width:  65px;
+    width: 65px;
     height: 65px;
+  }
+
+  .reverse .coaches-left {
+    order: 1;
+    margin-left: 0;
+  }
+
+  .reverse .coaches-right {
+    order: 2;
+    direction: ltr;
   }
 }

@@ -7,44 +7,38 @@ import certificates from "../../assets/certificates.png";
 import "./Sections.css";
 
 const Sections = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleDotClick = (index) => {
-    setActiveIndex(index);
-  };
-
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const { t } = useTranslation('sections');
 
-    const SectionsCardsData = [
-        { 
-            image: courses,
-            title: t('courses.title'),
-            text: t('courses.text'),
-            width: '15rem',
-            height: '20rem'
-        },
-        { 
-            image: bacaloria,
-            title: t('bachelor.title'),
-            text: t('bachelor.text'),
-            width: '18rem',
-            height: '24rem'
-        },
-        { 
-            image: certificates,
-            title: t('certificates.title'),
-            text: t('certificates.text'),
-            width: '15rem',
-            height: '20rem'
-        }
-    ];
-
+  const SectionsCardsData = [
+    { 
+      image: courses,
+      title: t('courses.title'),
+      text: t('courses.text'),
+      width: '15rem',
+      height: '20rem'
+    },
+    { 
+      image: bacaloria,
+      title: t('bachelor.title'),
+      text: t('bachelor.text'),
+      width: '15rem',
+      height: '20rem'
+    },
+    { 
+      image: certificates,
+      title: t('certificates.title'),
+      text: t('certificates.text'),
+      width: '15rem',
+      height: '20rem'
+    }
+  ];
 
   return (
     <div className="Sections" id="sections">
-       <h1 className="Sections-Title">{t('title')}</h1>
-        <p className="Sections-text">{t('text')}</p>
-       <div className="SectionCards-container">
+      <h1 className="Sections-Title">{t('title')}</h1>
+      <p className="Sections-text">{t('text')}</p>
+      <div className="SectionCards-container">
         {SectionsCardsData.map((card, index) => (
           <SectionsCard
             key={index}
@@ -53,8 +47,9 @@ const Sections = () => {
             description={card.text}
             width={card.width}
             height={card.height}
-            isMiddleCard={index === Math.floor(SectionsCardsData.length / 2)}
             hasBorder={true}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           />
         ))}
       </div>
@@ -62,13 +57,12 @@ const Sections = () => {
         {SectionsCardsData.map((_, index) => (
           <div
             key={index}
-            className={`dot ${index === activeIndex ? "active" : ""}`}
-            onClick={() => handleDotClick(index)}
+            className={`dot ${index === hoveredIndex ? 'hovered' : ''}`}
           />
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sections
+export default Sections;

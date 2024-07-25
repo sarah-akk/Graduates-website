@@ -45,7 +45,7 @@ const Overview = () => {
             </div>
           </li>
       </div>
-      <div className="overview-right">
+      <div className={`overview-right ${isRtl ? 'rtl' : ''}`}>
         <div className="circle-container">
           <div className="circle">
             <img src={photo1} alt="Circle 1" className="circle-image" />

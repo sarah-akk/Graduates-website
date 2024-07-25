@@ -15,8 +15,8 @@ export const SectionsCardsData = [
     image : bacaloria,
     title : "Bachelor",
     text : "Baccalaureate is a term used in several countries to describe the final stage of secondary education and its graduation certificate. The details of the baccalaureate system vary between countries, but there are many common elements.",
-    width: '18rem',
-     height: '24rem'
+    width: '15rem',
+    height: '20rem'
    }
    ,
    { 

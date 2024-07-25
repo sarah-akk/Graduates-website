@@ -1,25 +1,32 @@
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
   background-color: white;
+  margin: 0;
 }
 
 .contact-title {
   font-size: 24px;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   color: #163EAF;
   text-align: center;
   font-size: 3rem;
 }
 
 .contact-left {
-  flex: 1;
-  padding: 1rem;
-}
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
 
 .contact-info {
   font-size: 16px;
+  text-align: start;
+  direction: ltr; 
   margin: 1rem;
 }
 
@@ -29,6 +36,8 @@
 
 .contact-right {
   flex: 1;
+  width: 50%;
+  padding: 3rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -37,6 +46,7 @@
 
 .contact-form {
   display: flex;
+  direction: ltr; 
   flex-direction: column;
 }
 
@@ -67,6 +77,21 @@
   background-color: #163EAF;
 }
 
+.contact-container-ar{
+  flex-direction: row-reverse;
+}
+
+.contact-container-ar .contact-form{
+  
+  direction: rtl; 
+}
+
+
+.contact-container-ar .contact-info img{
+  margin-left: 1rem;
+
+}
+
 /* Mobile responsive styles */
 @media (max-width: 599px) {
   .contact-container {
@@ -74,14 +99,14 @@
   }
 
   .contact-left {
-    width: 100%;
+    width: 90%;
     order: 2; 
     padding: 0;
     margin-top: 1rem;
   }
 
   .contact-right {
-    width: 100%;
+    width: 90%;
     order: 1; 
     padding: 0;
     text-align: start;

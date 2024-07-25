@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 7rem;
+  gap: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-image: linear-gradient(#127EE1, #163EAF);
@@ -12,24 +12,35 @@
 }
 
 .overview-left {
+  order: 1;
   flex: 1;
   direction: ltr;
-  margin-left: 5rem;
+  padding: 1rem;
 }
 
-.rtl {
+.rtl  {
   direction: rtl;
+  order: 2;
+}
+
+.h2{
+  margin: 0;
+  padding: 0;
+}
+
+.p{
+  margin: 0;
+  padding: 0;
 }
 
 .overview-title {
   color: white;
   font-size: 24px;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .overview-list {
   list-style: none;
-  padding: 2rem;
 }
 
 .overview-item {
@@ -181,10 +192,10 @@
 
   .overview-right {
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     height: auto;
     padding-bottom : 10rem;
-    padding-top: 8rem;
+    padding-top: 12rem;
     order: 2;
     overflow: hidden;
   }

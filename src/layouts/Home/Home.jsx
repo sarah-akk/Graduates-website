@@ -10,41 +10,36 @@ import graduates from "../../assets/graduates.png";
 import sections from "../../assets/sections.png";
 import './Home.css';
 
-
-
 const Home = () => {
-  
   const { t, i18n } = useTranslation();
   const [pathData, setPathData] = useState('M0,100 C10,250 690,0 500,460 L500,00 L0,0 Z');
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
   const currentLanguage = i18n.language;
 
- const StartPageCardsData = [
-
-
-  { 
-    image: duration,
-    title: t('cards.duration.title'),
-    text: t('cards.duration.text'),
-    width: '5rem',
-    height: '6rem'
-  },
-  { 
-    image: graduates,
-    title: t('cards.graduates.title'),
-    text: t('cards.graduates.text'),
-    width: '5rem',
-    height: '6rem'
-  },
-  { 
-    image: sections,
-    title: t('cards.sections.title'),
-    text: t('cards.sections.text'),
-    width: '5rem',
-    height: '6rem'
-  }
-]
+  const StartPageCardsData = [
+    { 
+      image: duration,
+      title: t('cards.duration.title'),
+      text: t('cards.duration.text'),
+      width: '5rem',
+      height: '6rem'
+    },
+    { 
+      image: graduates,
+      title: t('cards.graduates.title'),
+      text: t('cards.graduates.text'),
+      width: '5rem',
+      height: '6rem'
+    },
+    { 
+      image: sections,
+      title: t('cards.sections.title'),
+      text: t('cards.sections.text'),
+      width: '5rem',
+      height: '6rem'
+    }
+  ];
 
   useEffect(() => {
     const updatePathData = () => {
@@ -79,6 +74,8 @@ const Home = () => {
     setSidebarOpen(false); 
   };  
 
+  const orderedCardsData = currentLanguage === 'en' ? [...StartPageCardsData].reverse() : StartPageCardsData;
+
   return (
     <div className="container" id='home'>
       <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
@@ -89,7 +86,7 @@ const Home = () => {
           </linearGradient>
         </defs>
         <path d={pathData} style={{ stroke: 'none', fill: 'url(#grad1)' }}></path>
-        {!isMobile ? <circle  cx="40" cy="160" r="20" fill="transparent" stroke='white' /> : " "}
+        {!isMobile ? <circle cx="40" cy="160" r="20" fill="transparent" stroke='white' /> : " "}
       </svg>
 
       {isMobile ? (
@@ -103,31 +100,31 @@ const Home = () => {
       )}
 
       {currentLanguage === 'en' && (
-                <div className="content">
-                    <div className="image-content">
-                        <img src={lady} alt="Image" />
-                    </div>
-                    <div className="text-content">
-                    <h1>{t('welcome_message')}</h1>
-                    <p dangerouslySetInnerHTML={{ __html: t('description') }}></p>
-                    </div>
-                </div>
-            )}
+        <div className="content">
+          <div className="image-content">
+            <img src={lady} alt="Image" />
+          </div>
+          <div className="text-content-en">
+            <h1>{t('welcome_message')}</h1>
+            <p dangerouslySetInnerHTML={{ __html: t('description') }}></p>
+          </div>
+        </div>
+      )}
 
-            {currentLanguage === 'ar' && (
-                <div className="content">
-                    <div className="text-content">   
-                    <h1>{t('welcome_message')}</h1>
-                    <p dangerouslySetInnerHTML={{ __html: t('description') }}></p> 
-                    </div>
-                    <div className="image-content">
-                        <img src={lady} alt="Image" />
-                    </div>
-                </div>
-            )}
+      {currentLanguage === 'ar' && (
+        <div className="content">
+          <div className="text-content">   
+            <h1>{t('welcome_message')}</h1>
+            <p dangerouslySetInnerHTML={{ __html: t('description') }}></p> 
+          </div>
+          <div className="image-content">
+            <img src={lady} alt="Image" />
+          </div>
+        </div>
+      )}
 
       <div className="homeCards-container">
-        {StartPageCardsData.map((card, index) => (
+        {orderedCardsData.map((card, index) => (
           <SectionsCard
             key={index}
             image={card.image}
@@ -136,6 +133,7 @@ const Home = () => {
             width={card.width}
             height={card.height}
             hasBorder={true}
+            homeCard={true}
           />
         ))}
       </div>

@@ -1,61 +1,70 @@
 .application-container {
-    display: flex;
-    background-color: #127EE1; 
-    padding: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    height: 20rem; 
-    margin-bottom: 10rem;
-  }
-  
-  .application-left,
-  .application-middle,
-  .application-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  .application-text {
-    color: white;
-    font-size: 18px;
-    margin-bottom: 1rem;
-    font-size: 24px;
-    font-weight: 500;
-  }
-  
-  .application-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  @media (max-width: 599px) {
-    .application-container {
+  display: flex;
+  background-color: #127EE1; 
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 15rem; 
+  margin-bottom: 4rem;
+}
+
+.application-text-container,
+.application-image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.application-text {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+
+.application-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.reverse .application-text-container {
+  order: 2;
+}
+
+.reverse .application-image-container {
+  order: 1;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 599px) {
+  .application-container {
       flex-direction: column;
       height: auto; 
       margin-bottom: 0rem;
-    }
-  
-    .application-left {
-      order: 1;
-    }
-    
-    .application-middle {
-      order: 2;
-    }
-  
-  
-    .application-right {
-      order: 3;
-    }
+  }
 
-    .application-text{
+  .application-text-container,
+  .application-image-container {
+      width: 100%;
+      padding: 1rem;
+  }
+
+  .application-text {
       font-size: 28px;
       font-weight: bold;
-    }
+      text-align: center;
   }
-  
+
+  .reverse .application-text-container {
+      order: 2;
+  }
+
+  .reverse .application-image-container {
+      order: 1;
+  }
+}

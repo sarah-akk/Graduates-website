@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 const NavBar = () => {
     const { t, i18n } = useTranslation('home');
     const [activeLang, setActiveLang] = useState('ar');
+    const [activeMenuItem, setActiveMenuItem] = useState(0);
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
@@ -15,40 +16,41 @@ const NavBar = () => {
     };
 
     return (
-        <div className="NaveBar">
-            <div className="language-switcher">
-                <button
-                    className={`language-button ${activeLang === 'en' ? 'active' : ''}`}
-                    onClick={() => changeLanguage('en')}
-                >
-                    EN
-                    <span></span>
-                </button>
-                <button
-                    className={`language-button ${activeLang === 'ar' ? 'active' : ''}`}
-                    onClick={() => changeLanguage('ar')}
-                >
-                    AR
-                    <span></span>
-                </button>
-            </div>
-            <div className='menu'>
-                {NavData.map((item, index) => (
-                    <Link
-                        to={item.link}
-                        key={index}
-                        spy={true} 
-                        smooth={true} 
-                        offset={10} 
-                        duration={500}
+        <div className={`NaveBar ${activeLang === 'en' ? 'reverse-order' : ''}`}>
+            <div className="menu-and-language-switcher">
+                <div className="menu">
+                    {NavData.map((item, index) => (
+                        <Link
+                            to={item.link}
+                            key={index}
+                            spy={true}
+                            smooth={true}
+                            offset={10}
+                            duration={500}
+                            onClick={() => setActiveMenuItem(index)}
+                        >
+                            <div className={`menuItem ${activeMenuItem === index ? 'active' : ''}`}>
+                                {t(`navbar.${item.link}`)}
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+                <div className="language-switcher">
+                    <button
+                        className={`language-button ${activeLang === 'en' ? 'active' : ''}`}
+                        onClick={() => changeLanguage('en')}
                     >
-                        <div className='menuItem'>
-                            {t(`navbar.${item.link}`)}
-                        </div>
-                    </Link>
-                ))}
+                        EN
+                    </button>
+                    <button
+                        className={`language-button ${activeLang === 'ar' ? 'active' : ''}`}
+                        onClick={() => changeLanguage('ar')}
+                    >
+                        AR
+                    </button>
+                </div>
             </div>
-            <img src={logo} className="logo"/>
+            <img src={logo} className="logo" alt="Logo" />
         </div>
     );
 }
